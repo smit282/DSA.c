@@ -25,7 +25,7 @@ void display()
     printf("\n"); 
 }
 
-void insert_end()
+void end_insert()
 {
     int val;
     printf("enter value insert:");
@@ -48,7 +48,7 @@ void insert_end()
     return;
 }
 
-void delete_end()
+void end_delete()
 {
     struct node * ptr = head;
     struct node * p;
@@ -94,8 +94,8 @@ void first_insert()
 
 void first_delete()
 {
-    struct node * ptr=head;
-    struct node * p= head;
+    struct node * ptr = head;
+    struct node * p = head;
 
     while(ptr->next != head)
         ptr = ptr->next;
@@ -149,24 +149,24 @@ int main()
     int ch;
     do
     {
-        printf("\n1. Insert End\n");
-        printf("2. Delete End\n");
+        printf("\n1. End Insert\n");
+        printf("2. End Delete\n");
         printf("3. First Insert\n");
         printf("4. First Delete\n");
         printf("5. Mid Insert\n"); 
         printf("6. Mid Delete\n"); 
-        printf("9. display");
+        printf("7. display");
         printf("\n\nEnter Your Choice: ");
         scanf("%d",&ch);
 
         switch(ch)
         {
             case 1:
-                insert_end();
+                end_insert();
             break;
 
             case 2:
-                delete_end();
+                end_delete();
             break;
 
             case 3:
@@ -185,7 +185,7 @@ int main()
                 mid_delete();
             break;
 
-            case 9:
+            case 7:
                 display();
             break;
 
